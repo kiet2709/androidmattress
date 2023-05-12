@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProfileActivity">
+
+    <include
+        android:id="@+id/header"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scrollview"
+        layout="@layout/header2" />
+    <ScrollView
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        android:layout_height="550dp"
+        android:id="@+id/scrollview">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:background="@color/black2"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:orientation="vertical" >
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageProfile"
+                android:layout_width="134dp"
+                android:layout_height="130dp"
+                android:background="@color/black"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                app:riv_oval="true"
+                android:src="@mipmap/ic_launcher"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Kiet"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:text="First name:"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:text="Tuấn Kiệt"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:text="Last name:"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:text="Lê Nguyễn"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:text="Phone number:"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:text="0123456789"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:text="Birthday:"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:text="2002-09-27"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:text="Address:"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:text="Số 1 Võ Văn Ngânnnn"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:text="Save"
+                android:textSize="27sp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <include
+        android:id="@+id/footer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollview"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        layout="@layout/footer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

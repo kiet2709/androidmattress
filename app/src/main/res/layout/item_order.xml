@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_height="110dp">
+
+    <LinearLayout
+        android:id="@+id/item_order"
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:weightSum="10"
+        android:orientation="horizontal" >
+
+
+        <LinearLayout
+            android:layout_marginLeft="7dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="6"
+            android:weightSum="3"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txt_orderDate"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="12/05/2023"
+                android:padding="6dp"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txt_sumOrder"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Sum: "
+                    android:textColor="@color/black"
+                    android:padding="6dp"
+                    android:textSize="28sp" />
+                <TextView
+                    android:id="@+id/txt_numberSumOrder"
+                    android:layout_width="230dp"
+                    android:layout_height="match_parent"
+                    android:text="50$"
+                    android:textColor="@color/black"
+                    android:padding="6dp"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

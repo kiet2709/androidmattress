@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity">
+
+    tools:context=".activity.AdminProductActivity">
 
     <include
         android:id="@+id/header"
@@ -14,7 +15,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/scrollview"
-        layout="@layout/header" />
+        layout="@layout/header_admin" />
 
     <ScrollView
         android:layout_width="0dp"
@@ -27,42 +28,32 @@
 
         <LinearLayout
             android:id="@+id/content"
-            android:background="@color/black2"
             android:layout_width="match_parent"
             android:layout_height="550dp"
+            android:background="@color/white"
             android:orientation="vertical" >
 
-            <ImageView
-                android:src="@drawable/product1"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"/>
             <Spinner
-                android:id="@+id/spinnerProduct"
+                android:id="@+id/spinnerAdmin"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"/>
-            <TextView
-                android:text="50$"
-                android:layout_marginTop="20dp"
-                android:paddingLeft="30dp"
-                android:textColor="@color/white"
-                android:textSize="35sp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:textSize="27dp"
-                android:padding="15dp"
-                android:textColor="@color/white"
-                android:text="oashrgiusdfbgijbfdjhgbsfjzhbghijszfbgibsfzigbfsihjvbzdfsijbhsi"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_marginTop="100dp"
-                android:text="Add to cart"
-                android:textSize="30sp"
                 android:layout_height="60dp"/>
+            <GridView
+                android:id="@+id/gridview_productAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:columnWidth="130dp"
+                android:gravity="center"
+                android:horizontalSpacing="25dp"
+                android:numColumns="1"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="33dp"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp" />
         </LinearLayout>
     </ScrollView>
+
+
+
     <include
         android:id="@+id/footer"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -71,8 +62,6 @@
         android:layout_height="60dp"
         android:layout_width="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        layout="@layout/footer" />
-
+        layout="@layout/footer_admin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

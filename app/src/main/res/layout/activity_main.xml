@@ -59,15 +59,7 @@
                     android:textColor="@color/blue"
                     android:textAllCaps="true" />
 
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:layout_weight="3"
-                    android:text="All >>"
-                    android:textAllCaps="false"
-                    android:paddingLeft="60dp"
-                    android:backgroundTint="@color/black2"
-                    android:textSize="10sp" />
+
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -89,15 +81,6 @@
                     android:textColor="@color/blue"
                     android:textAllCaps="true" />
 
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:layout_weight="3"
-                    android:text="All >>"
-                    android:textAllCaps="false"
-                    android:paddingLeft="60dp"
-                    android:backgroundTint="@color/black2"
-                    android:textSize="10sp" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -118,16 +101,6 @@
                     android:text="Product"
                     android:textColor="@color/blue"
                     android:textAllCaps="true" />
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:layout_weight="3"
-                    android:text="All >>"
-                    android:textAllCaps="false"
-                    android:paddingLeft="60dp"
-                    android:backgroundTint="@color/black2"
-                    android:textSize="10sp" />
             </LinearLayout>
 
             <GridView

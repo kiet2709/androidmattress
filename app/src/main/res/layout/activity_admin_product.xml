@@ -33,10 +33,6 @@
             android:background="@color/white"
             android:orientation="vertical" >
 
-            <Spinner
-                android:id="@+id/spinnerAdmin"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"/>
             <GridView
                 android:id="@+id/gridview_productAdmin"
                 android:layout_width="match_parent"

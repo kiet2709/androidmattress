@@ -13,19 +13,25 @@
         android:weightSum="3"
         android:layout_height="60dp" >
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/btnHomeAdmin"
+            android:backgroundTint="@color/trans"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:scaleType="center"
             android:src="@drawable/home" />
-        <ImageView
+        <ImageButton
+            android:id="@+id/btnProductAdmin"
+            android:backgroundTint="@color/trans"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:scaleType="center"
             android:src="@drawable/category" />
-        <ImageView
+        <ImageButton
+            android:id="@+id/btnAdmin"
+            android:backgroundTint="@color/trans"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Ecommerce"
+            android:text="KOKO"
             android:paddingBottom="15dp"
             android:textColor="@color/blue"
             android:textAllCaps="true"
@@ -27,6 +27,7 @@
 
         <ImageView
             android:layout_width="35dp"
+            android:id="@+id/btnCart"
             android:layout_height="match_parent"
             android:src="@drawable/cart"
             android:layout_marginLeft="350dp" />
@@ -55,16 +56,19 @@
             android:textColor="@color/white2"
             android:layout_width="0dp"
             android:layout_weight="9"
+            android:id="@+id/edt_search"
             android:layout_marginVertical="7dp"
             android:layout_height="match_parent"
             android:hint="Search..."/>
 
-        <ImageView
+        <ImageButton
             android:layout_weight="1"
+            android:id="@+id/btn_search"
             android:background="@color/black3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginVertical="7dp"
+            android:scaleType="fitCenter"
             android:src="@drawable/search" />
 
     </LinearLayout>

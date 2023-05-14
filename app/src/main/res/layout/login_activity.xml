@@ -17,7 +17,7 @@
         android:textStyle="bold"
         android:layout_marginTop="70dp"
         android:layout_marginHorizontal="30dp"
-        android:text="Welcome to Ecommerce"/>
+        android:text="KOKO"/>
 
     <TextView
         android:layout_marginTop="15dp"
@@ -25,8 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
+        android:gravity="center"
         android:textColor="@color/white2"
-        android:text="Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+        android:text="Welcome to KOKO" />
 
     <EditText
         android:id="@+id/edtUsername"
@@ -65,25 +66,17 @@
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
-        android:weightSum="2"
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1.25"
+            android:id="@+id/txt_register"
+            android:layout_width="match_parent"
+            android:text="Register?"
+            android:textColor="@color/white"
             android:textSize="15sp"
-            android:gravity="left"
-            android:textColor="@color/white3"
-            android:layout_height="wrap_content"
-            android:text="Forgot password?" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="0.75"
-            android:gravity="right"
-            android:textSize="15sp"
-            android:textColor="@color/white3"
-            android:layout_height="wrap_content"
-            android:text="Register?" />
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 

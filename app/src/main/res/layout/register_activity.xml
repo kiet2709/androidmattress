@@ -18,7 +18,7 @@
         android:textStyle="bold"
 
         android:layout_marginHorizontal="30dp"
-        android:text="Ecommerce"/>
+        android:text="KOKO"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -35,68 +35,130 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        android:textColor="@color/white2"
-        android:text="Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:textSize="20sp"
-        android:textColor="@color/white2"
-        android:layout_marginTop="25dp"
-        android:paddingLeft="10dp"
-        android:textColorHint="@color/white2"
-        android:layout_marginHorizontal="30dp"
-        android:hint="Username" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:textSize="20sp"
-        android:textColor="@color/white2"
-        android:layout_marginTop="15dp"
-        android:paddingLeft="10dp"
-        android:textColorHint="@color/white2"
-        android:layout_marginHorizontal="30dp"
-        android:hint="Email" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:textSize="20sp"
-        android:textColor="@color/white2"
-        android:layout_marginTop="15dp"
-        android:paddingLeft="10dp"
-        android:textColorHint="@color/white2"
-        android:layout_marginHorizontal="30dp"
-        android:hint="Password" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:textSize="20sp"
-        android:textColor="@color/white2"
-        android:layout_marginTop="15dp"
-        android:paddingLeft="10dp"
-        android:textColorHint="@color/white2"
-        android:layout_marginHorizontal="30dp"
-        android:hint="Password Confirm" />
-    <Button
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:text="Register"
-        android:textSize="19sp"
-        android:textColor="@color/white2"
-        android:layout_marginHorizontal="30dp"
-        android:background="@color/blue" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="30dp"
-        android:textSize="15sp"
         android:gravity="center"
-        android:textColor="@color/white3"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:text="Forgot password?" />
+        android:textColor="@color/white2"
+        android:text="Welcome to KOKO!" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edt_RUsername"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textSize="20sp"
+                android:textColor="@color/white2"
+                android:layout_marginTop="25dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/white2"
+                android:layout_marginHorizontal="30dp"
+                android:hint="Username" />
+            <EditText
+                android:id="@+id/edt_REmail"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textSize="20sp"
+                android:textColor="@color/white2"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/white2"
+                android:layout_marginHorizontal="30dp"
+                android:hint="Email" />
+            <EditText
+                android:id="@+id/edt_RPassword"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textSize="20sp"
+                android:textColor="@color/white2"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/white2"
+                android:layout_marginHorizontal="30dp"
+                android:hint="Password" />
+            <EditText
+                android:id="@+id/edt_RFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textSize="20sp"
+                android:textColor="@color/white2"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/white2"
+                android:layout_marginHorizontal="30dp"
+                android:hint="FirstName" />
+            <EditText
+                android:id="@+id/edt_RLastName"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textSize="20sp"
+                android:textColor="@color/white2"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/white2"
+                android:layout_marginHorizontal="30dp"
+                android:hint="LastName" />
+            <EditText
+                android:id="@+id/edt_RPhone"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textSize="20sp"
+                android:textColor="@color/white2"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/white2"
+                android:layout_marginHorizontal="30dp"
+                android:hint="Phone Number" />
+            <EditText
+                android:id="@+id/edt_RBirthday"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textSize="20sp"
+                android:textColor="@color/white2"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/white2"
+                android:layout_marginHorizontal="30dp"
+                android:hint="Birthday" />
+            <EditText
+                android:id="@+id/edt_RAddress"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textSize="20sp"
+                android:textColor="@color/white2"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/white2"
+                android:layout_marginHorizontal="30dp"
+                android:hint="Address" />
+            <Button
+                android:id="@+id/btn_RRegister"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="Register"
+                android:textSize="19sp"
+                android:textColor="@color/white2"
+                android:layout_marginHorizontal="30dp"
+                android:background="@color/blue" />
+
+            <TextView
+                android:id="@+id/txt_RLogin"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="30dp"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:textColor="@color/white3"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="Login?" />
+        </LinearLayout>
+    </ScrollView>
+
+
 
 
 </LinearLayout>

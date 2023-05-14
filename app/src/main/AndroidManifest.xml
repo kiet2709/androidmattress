@@ -20,6 +20,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".activity.AdminSignOutAcitivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoadProductActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ProductDetailActivity"
             android:exported="false" />
         <activity
@@ -50,7 +56,7 @@
             android:name=".activity.CategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
             android:name=".activity.OrderCompletedActivity"
@@ -74,10 +80,10 @@
             android:name=".activity.SplashActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.AdminProductActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.AdminProductActivity"
+            android:name=".activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

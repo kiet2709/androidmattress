@@ -16,16 +16,11 @@
         android:layout_width="match_parent"
         android:layout_height="80dp">
 
-        <ImageButton
-            android:layout_width="70dp"
-            android:src="@drawable/arrow_back"
-            android:backgroundTint="@color/trans"
-            android:layout_height="match_parent"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Ecommerce"
+            android:text="KOKO"
             android:paddingBottom="15dp"
             android:textColor="@color/blue"
             android:textAllCaps="true"

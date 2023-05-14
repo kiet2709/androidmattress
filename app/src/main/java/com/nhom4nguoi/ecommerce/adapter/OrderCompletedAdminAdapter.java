@@ -1,6 +1,7 @@
 package com.nhom4nguoi.ecommerce.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,11 +9,24 @@ import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.nhom4nguoi.ecommerce.R;
+import com.nhom4nguoi.ecommerce.activity.AdminOrderCompleted;
+import com.nhom4nguoi.ecommerce.activity.AdminOrderInProgressActivity;
+import com.nhom4nguoi.ecommerce.api.ApiClient;
+import com.nhom4nguoi.ecommerce.api.OrderApi;
 import com.nhom4nguoi.ecommerce.model.Order;
+import com.nhom4nguoi.ecommerce.response.APICurrentOrder.CurrentOrderResponseItem;
+import com.nhom4nguoi.ecommerce.response.OrderStatusRequest;
+import com.nhom4nguoi.ecommerce.util.SharedPrefManager;
 
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class OrderCompletedAdminAdapter extends BaseAdapter {
     private Context context;
@@ -85,7 +99,6 @@ public class OrderCompletedAdminAdapter extends BaseAdapter {
             viewHolder.itemOrder = (LinearLayout) view.findViewById(R.id.item_orderAdmin);
             viewHolder.prev = (ImageButton) view.findViewById(R.id.btn_prevAdmin);
             viewHolder.next = (ImageButton) view.findViewById(R.id.btn_nextAdmin);
-            viewHolder.btndel = (ImageButton) view.findViewById(R.id.btn_delAdmin);
 
             view.setTag(viewHolder);
         }else{
@@ -95,13 +108,34 @@ public class OrderCompletedAdminAdapter extends BaseAdapter {
         viewHolder.textOrderDate.setText(order.getOrderDate().toString());
         viewHolder.textSum.setText(order.getSum());
         viewHolder.itemOrder.setBackgroundColor(0xFF00FF00);
+        viewHolder.prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                OrderStatusRequest orderStatusRequest = new OrderStatusRequest(order.getId(), "In delivering");
+                OrderApi orderApi;
+                Retrofit retrofit = ApiClient.getClient();
+                orderApi = retrofit.create(OrderApi.class);
+                orderApi.updateOrder(SharedPrefManager.getInstance(context).getJWT(), orderStatusRequest).enqueue(new Callback<CurrentOrderResponseItem>() {
+                    @Override
+                    public void onResponse(Call<CurrentOrderResponseItem> call, Response<CurrentOrderResponseItem> response) {
+                        Toast.makeText(context, "Update Successfully!", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(context, AdminOrderCompleted.class);
+                        context.startActivity(intent);
+                    }
 
+                    @Override
+                    public void onFailure(Call<CurrentOrderResponseItem> call, Throwable t) {
+
+                    }
+                });
+            }
+        });
         return view;
     }
 
     private class ViewHolder{
         TextView textOrderDate, textSum;
         LinearLayout itemOrder;
-        ImageButton prev, next, btndel;
+        ImageButton prev, next;
     }
 }

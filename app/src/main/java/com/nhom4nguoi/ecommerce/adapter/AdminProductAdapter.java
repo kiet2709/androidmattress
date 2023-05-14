@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.nhom4nguoi.ecommerce.R;
 import com.nhom4nguoi.ecommerce.model.CartItem;
 
@@ -91,7 +92,7 @@ public class AdminProductAdapter extends BaseAdapter {
         }
         CartItem cartItem = cartItems.get(i);
         viewHolder.textName.setText(cartItem.getName());
-        viewHolder.imagePic.setImageResource(cartItem.getResourceId());
+        Glide.with(context).load(cartItem.getPath()).into(viewHolder.imagePic);
         viewHolder.textPrice.setText(cartItem.getPrice());
         viewHolder.quantity.setText(cartItem.getQuantity());
         return view;

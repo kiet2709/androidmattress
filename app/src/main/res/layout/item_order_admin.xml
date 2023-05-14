@@ -72,13 +72,6 @@
                     android:backgroundTint="@color/trans"
                     android:src="@drawable/baseline_arrow_forward_24"
                     android:layout_height="match_parent" />
-                <ImageButton
-                    android:id="@+id/btn_delAdmin"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/trans"
-                    android:src="@drawable/delete"
-                    android:layout_height="match_parent" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

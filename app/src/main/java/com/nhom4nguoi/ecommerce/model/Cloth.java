@@ -1,22 +1,39 @@
 package com.nhom4nguoi.ecommerce.model;
 
-public class Cloth {
-    private int resourceId;
+import java.io.Serializable;
+
+public class Cloth implements Serializable {
+    private int id;
     private String title;
     private int price;
 
-    public Cloth(int resourceId, String title, int price) {
-        this.resourceId = resourceId;
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    private String path;
+
+    public Cloth(int id, String title, int price) {
+        this.id = id;
         this.title = title;
         this.price = price;
     }
 
-    public int getResourceId() {
-        return resourceId;
+    public Cloth(String title, int price) {
+        this.title = title;
+        this.price = price;
     }
 
-    public void setResourceId(int resourceId) {
-        this.resourceId = resourceId;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int resourceId) {
+        this.id = id;
     }
 
     public String getTitle() {

@@ -13,23 +13,29 @@
         android:weightSum="3"
         android:layout_height="60dp" >
 
-        <ImageView
+        <ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:scaleType="center"
+            android:id="@+id/btn_home"
+            android:backgroundTint="@color/black"
             android:src="@drawable/home" />
-        <ImageView
+        <ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:scaleType="center"
+            android:backgroundTint="@color/black"
+            android:id="@+id/btn_category"
             android:src="@drawable/category" />
-        <ImageView
+        <ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:scaleType="center"
+            android:backgroundTint="@color/black"
+            android:id="@+id/btn_user"
             android:src="@drawable/user" />
 
     </LinearLayout>

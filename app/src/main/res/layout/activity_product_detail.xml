@@ -33,6 +33,7 @@
             android:orientation="vertical" >
 
             <ImageView
+                android:id="@+id/img_productDetail"
                 android:src="@drawable/product1"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"/>
@@ -42,6 +43,7 @@
                 android:layout_height="70dp"/>
             <TextView
                 android:text="50$"
+                android:id="@+id/txt_priceDetail"
                 android:layout_marginTop="20dp"
                 android:paddingLeft="30dp"
                 android:textColor="@color/white"
@@ -49,6 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
             <TextView
+                android:id="@+id/txt_descriptionDetail"
                 android:layout_width="match_parent"
                 android:textSize="27dp"
                 android:padding="15dp"
@@ -56,6 +59,7 @@
                 android:text="oashrgiusdfbgijbfdjhgbsfjzhbghijszfbgibsfzigbfsihjvbzdfsijbhsi"
                 android:layout_height="wrap_content"/>
             <Button
+                android:id="@+id/btn_addToCart"
                 android:layout_width="match_parent"
                 android:layout_marginTop="100dp"
                 android:text="Add to cart"

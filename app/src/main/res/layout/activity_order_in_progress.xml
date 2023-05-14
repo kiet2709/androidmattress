@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.OrderActivity">
+    tools:context=".activity.OrderInProgressActivity">
 
     <include
         android:id="@+id/header"
@@ -37,6 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
                 <Button
+                    android:id="@+id/btnConfirmOrder"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:text="Confirmation"
@@ -45,6 +46,7 @@
                     android:textSize="11sp"
                     android:layout_height="match_parent"/>
                 <Button
+                    android:id="@+id/btnInProgressOrder"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:text="In progress"
@@ -53,6 +55,7 @@
                     android:textSize="12sp"
                     android:layout_height="match_parent"/>
                 <Button
+                    android:id="@+id/btnCompletedOrder"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:text="Completed"

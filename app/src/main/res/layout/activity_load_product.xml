@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <include
+        android:id="@+id/header"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scrollview"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        android:layout_height="550dp"
+        android:id="@+id/scrollview">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:background="@color/black2"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:orientation="vertical" >
+
+            <GridView
+                android:layout_marginTop="15dp"
+                android:numColumns="2"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp"
+                android:gravity="center"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="33dp"
+                android:horizontalSpacing="25dp"
+                android:columnWidth="130dp"
+                android:id="@+id/gridview_product"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"/>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+    <include
+        android:id="@+id/footer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollview"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        layout="@layout/footer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

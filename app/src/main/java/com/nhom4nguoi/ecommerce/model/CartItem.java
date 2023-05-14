@@ -3,17 +3,26 @@ package com.nhom4nguoi.ecommerce.model;
 public class CartItem {
     private String name;
     private String price;
-    private int resourceId;
+    private int id;
     private String quantity;
+    private String size;
+    private String path;
+    private int sizeNumber;
 
-    public CartItem() {
+    public int getSizeNumber() {
+        return sizeNumber;
     }
 
-    public CartItem(String name, String price, int resourceId, String quantity) {
-        this.name = name;
-        this.price = price;
-        this.resourceId = resourceId;
-        this.quantity = quantity;
+    public void setSizeNumber(int sizeNumber) {
+        this.sizeNumber = sizeNumber;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 
     public String getName() {
@@ -32,12 +41,12 @@ public class CartItem {
         this.price = price;
     }
 
-    public int getResourceId() {
-        return resourceId;
+    public int getId() {
+        return id;
     }
 
-    public void setResourceId(int resourceId) {
-        this.resourceId = resourceId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getQuantity() {
@@ -46,5 +55,24 @@ public class CartItem {
 
     public void setQuantity(String quantity) {
         this.quantity = quantity;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public CartItem() {
+    }
+
+    public CartItem(String name, String price, int id, String quantity, String size) {
+        this.name = name;
+        this.price = price;
+        this.id = id;
+        this.quantity = quantity;
+        this.size = size;
     }
 }

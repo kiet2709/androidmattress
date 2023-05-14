@@ -150,7 +150,7 @@ public class ProfileActivity extends AppCompatActivity {
                 txtBirthday.setText(userResponse.getBirthday());
                 txtAddress.setText(userResponse.getAddress());
                 txtPhoneNumber.setText(userResponse.getPhoneNumber());
-                Glide.with(ProfileActivity.this).load("http://172.22.224.1:8081/api/v1/users/current/images").into(avatar);
+                Glide.with(ProfileActivity.this).load("http://172.22.224.1:8081/api/v1/users/"+userResponse.getId()+"/images").into(avatar);
                 Log.d("kiet", "onResponse: " + userResponse);
             }
 
